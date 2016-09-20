@@ -30,7 +30,7 @@ let text = testvar2[testvar]
 const handler = (payload, res) => {
   let msg = _.defaults({
     channel: payload.channel_name,
-    text: text
+    text: testvar2[testvar]
   }, msgDefaults)
 
   res.set('content-type', 'application/json')
