@@ -30,7 +30,7 @@ let text = testvar2[testvar]
 let handler = (payload, res) => {
   let msg = _.defaults({
     channel: payload.channel_name,
-    text: testvar2[testvar]
+    text: testvar2[Math.floor(Math.random() * (9 -0)) + 0]
   }, msgDefaults)
 
   res.set('content-type', 'application/json')
