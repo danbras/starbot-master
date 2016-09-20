@@ -10,9 +10,11 @@ const msgDefaults = {
   icon_emoji: config('ICON_EMOJI')
 }
 
+let testvar = 1
+
 let attachments = [
   {
-    title: 'TEST Starbot will help you find the hippest repos on GitHub',
+    title: testvar+'TEST Starbot will help you find the hippest repos on GitHub',
     color: '#2FA44F',
     text: '`/starbot repos` returns hip repos \n`/starbot javascript` returns hip JavaScript repos',
     mrkdwn_in: ['text']
