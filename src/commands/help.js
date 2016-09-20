@@ -10,7 +10,7 @@ const msgDefaults = {
   icon_emoji: config('ICON_EMOJI')
 }
 
-let testvar = 1
+let testvar = Math.floor(Math.random() * (10 - 1)) + 1;
 
 let attachments = [
   {
