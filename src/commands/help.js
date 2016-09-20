@@ -10,37 +10,27 @@ const msgDefaults = {
   icon_emoji: config('ICON_EMOJI')
 }
 
-let testvar = Math.floor(Math.random() * (1 -0)) + 0
+let testvar = Math.floor(Math.random() * (9 -0)) + 0
 let testvar2 = 
 [
-'>It is a capital mistake to theorize before one has data. - _Sherlock Holmes_',
-'>You can have data without information, but you cannot have information without data. - _Daniel Keys Moran_',
-'Q3',
-'Q4',
-'Q5',
-'Q6',
-'Q7',
-'Q8',
-'Q9',
-'Q10'
+'_It is a capital mistake to theorize before one has data._ —Sherlock Holmes',
+'_You can have data without information, but you cannot have information without data._ —Daniel Keys Moran',
+'_The data fabric is the next middleware._ —Todd Papaioannou',
+'_Hiding within those mounds of data is knowledge that could change the life of a patient, or change the world._ —Atul Butte',
+'_Facts do not cease to exist because they are ignored._ —Aldous Huxley',
+'_Statistics are human beings with the tears wiped off._ —Paul Brodeur',
+'_To find out what happens when you change something, it is necessary to change it._ —Box, Hunter, & Hunter, Statistics for Experimenters',
+'_Data are becoming the new raw material of business._ —Chris Lynch',
+'_If we have data, let\'s look at data. If all we have are opinions, let\'s go with mine._ —Jim Barksdale',
+'_Data is the new oil!_ —Clive Humby'
 ]
 
 let text = testvar2[testvar]
 
-let attachments = [
-  {
-    title: testvar+testvar2[0]+'TEST Starbot will help you find the hippest repos on GitHub',
-    color: '#2FA44F',
-    text: '`/starbot repos` returns hip repos \n`/starbot javascript` returns hip JavaScript repos',
-    mrkdwn_in: ['text']
-  }
-]
-
 const handler = (payload, res) => {
   let msg = _.defaults({
     channel: payload.channel_name,
-    text: text,
-    attachments: attachments
+    text: text
   }, msgDefaults)
 
   res.set('content-type', 'application/json')
