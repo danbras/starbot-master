@@ -10,7 +10,7 @@ const msgDefaults = {
   icon_emoji: config('ICON_EMOJI')
 }
 
-let testvar = Math.floor(Math.random() * (9 -0)) + 0
+let testvar = Math.floor(Math.random() * (1 -0)) + 0
 let testvar2 = 
 [
 '>It is a capital mistake to theorize before one has data. - _Sherlock Holmes_',
@@ -25,7 +25,7 @@ let testvar2 =
 'Q10'
 ]
 
-let text = 'TestText'
+let text = testvar2[testvar]
 
 let attachments = [
   {
