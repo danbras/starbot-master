@@ -27,7 +27,7 @@ let testvar2 =
 
 let text = testvar2[testvar]
 
-const handler = (payload, res) => {
+let handler = (payload, res) => {
   let msg = _.defaults({
     channel: payload.channel_name,
     text: testvar2[testvar]
