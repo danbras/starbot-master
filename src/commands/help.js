@@ -14,7 +14,7 @@ let testvar = Math.floor(Math.random() * (9 -0)) + 0
 let testvar2 = 
 [
 '>It is a capital mistake to theorize before one has data. - _Sherlock Holmes_',
-'Q2',
+'>You can have data without information, but you cannot have information without data. - _Daniel Keys Moran_',
 'Q3',
 'Q4',
 'Q5',
@@ -24,6 +24,8 @@ let testvar2 =
 'Q9',
 'Q10'
 ]
+
+let text = 'TestText'
 
 let attachments = [
   {
@@ -37,6 +39,7 @@ let attachments = [
 const handler = (payload, res) => {
   let msg = _.defaults({
     channel: payload.channel_name,
+    text: text,
     attachments: attachments
   }, msgDefaults)
 
